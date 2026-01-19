@@ -2,34 +2,38 @@
 #include <stdlib.h>
 #include <time.h>
 
-int ekok(int sayi1,int sayi2){
-    int kat,max;
+int ekok(int sayi1, int sayi2)
+{
+    int kat, max;
 
-    if(sayi1==0 || sayi2==0){
+    if (sayi1 == 0 || sayi2 == 0)
+    {
         return 0;
     }
 
-    if(sayi1>sayi2){
-        max=sayi1;
+    if (sayi1 > sayi2)
+    {
+        max = sayi1;
     }
-    else{
-        max=sayi2;
+    else
+    {
+        max = sayi2;
     }
 
-    kat=max;
+    kat = max;
 
-    for(;;){
-        if(kat%sayi1==0 && kat%sayi2==0){
+    for (;;)
+    {
+        if (kat % sayi1 == 0 && kat % sayi2 == 0)
+        {
             return kat;
         }
 
-        kat+=max;
+        kat += max;
     }
-
-
 }
 
 int main()
 {
-    printf("%d",ekok(7,4));
+    printf("%d", ekok(7, 4));
 }
